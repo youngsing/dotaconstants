@@ -8,6 +8,7 @@ import {
   replaceSValues,
   replaceSpecialAttribs,
   formatVpkHero,
+  replaceSpecialAbilityValues,
 } from './helper.ts'
 import {
   ResponseAbilities,
@@ -20,6 +21,8 @@ import { mapAbilities, parseVdf } from './utils/utils.ts'
 import myHeroes from '../tasks/customize_heroes.json' assert { type: 'json' }
 import { Hero } from '../interfaces/Hero.ts'
 
+const TOTAL_RUN = true
+
 const sources: {
   run: boolean
   key: string
@@ -28,7 +31,7 @@ const sources: {
   transform: (...args: any[]) => JsonObject
 }[] = [
   {
-    run: true,
+    run: TOTAL_RUN && true,
     key: 'items_cn',
     urls: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_schinese.json',
@@ -61,16 +64,19 @@ const sources: {
           )
         })
         .forEach((key) => {
+          const script = scripts[key]
+
           const item: JsonObject = {
             ...(replaceSpecialAttribs(
               strings[`DOTA_Tooltip_ability_${key}_Description`],
-              scripts[key].AbilitySpecial,
+              script.AbilitySpecial,
               true,
-              scripts[key]
+              script,
+              key
             ) as JsonObject),
           }
 
-          item.id = parseInt(scripts[key].ID)
+          item.id = parseInt(script.ID)
           item.img = `/apps/dota2/images/items/${key.replace(
             /^item_/,
             ''
@@ -80,8 +86,8 @@ const sources: {
           }
 
           item.dname = strings[`DOTA_Tooltip_ability_${key}`]
-          item.qual = scripts[key].ItemQuality
-          item.cost = parseInt(scripts[key].ItemCost)
+          item.qual = script.ItemQuality
+          item.cost = parseInt(script.ItemCost)
 
           const notes: string[] = []
           for (let i = 0; strings[`DOTA_Tooltip_ability_${key}_Note${i}`]; i++) {
@@ -91,13 +97,13 @@ const sources: {
           item.notes = notes.join('\n')
 
           item.attrib = formatAbilitySpecial(
-            scripts[key].AbilitySpecial,
+            script.AbilitySpecial,
             strings,
             `DOTA_Tooltip_ability_${key}_`
           ).filter((attr) => !attr.generated || attr.key === 'lifetime')
 
-          item.mc = parseInt(scripts[key].AbilityManaCost) || false
-          item.cd = parseInt(scripts[key].AbilityCooldown) || false
+          item.mc = parseInt(script.AbilityManaCost) || false
+          item.cd = parseInt(script.AbilityCooldown) || false
 
           item.lore = (strings[`DOTA_Tooltip_ability_${key}_Lore`] || '').replace(
             /\\n/g,
@@ -106,7 +112,7 @@ const sources: {
 
           item.components = null
           item.created = false
-          item.charges = parseInt(scripts[key].ItemInitialCharges) || false
+          item.charges = parseInt(script.ItemInitialCharges) || false
           if (neutralItemNameTierMap[key]) {
             item.tier = neutralItemNameTierMap[key]
           }
@@ -234,7 +240,7 @@ const sources: {
     },
   },
   {
-    run: true,
+    run: TOTAL_RUN && true,
     key: 'abilities_cn',
     urls: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_schinese.json',
@@ -290,8 +296,15 @@ const sources: {
             strings[`DOTA_Tooltip_ability_${key}_Description`],
             scripts[key].AbilitySpecial,
             false,
-            scripts[key]
+            scripts[key],
+            key
           )
+          if (/%\w+%/g.test(ability.desc)) {
+            ability.desc = replaceSpecialAbilityValues(
+              strings[`DOTA_Tooltip_ability_${key}_Description`],
+              scripts[key]
+            )
+          }
           ability.dmg =
             scripts[key].AbilityDamage && formatValues(scripts[key].AbilityDamage)
 
@@ -321,7 +334,7 @@ const sources: {
     },
   },
   {
-    run: true,
+    run: TOTAL_RUN && true,
     key: 'heroes_cn',
     urls: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_schinese.json',
@@ -355,7 +368,7 @@ const sources: {
     },
   },
   {
-    run: true,
+    run: TOTAL_RUN && true,
     key: 'hero_names_cn',
     urls: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_schinese.json',
@@ -389,7 +402,7 @@ const sources: {
     },
   },
   {
-    run: true,
+    run: TOTAL_RUN && true,
     key: 'hero_lore_cn',
     urls: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_schinese.txt',

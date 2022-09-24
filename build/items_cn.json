@@ -6035,7 +6035,7 @@
   },
   "tome_of_knowledge": {
     "hint": [
-      "使用：启迪直接获得700点经验值，而且己方在前两本书后每消耗一本知识之书，将额外获得135点经验。己方已使用本数：customval_team_tomes_used"
+      "使用：启迪直接获得700点经验值，而且己方在前两本书后每消耗一本知识之书，将额外获得135点经验。己方已使用本数：0"
     ],
     "id": 257,
     "img": "/apps/dota2/images/items/tome_of_knowledge_lg.png?t=1593393829403",

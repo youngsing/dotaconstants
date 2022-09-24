@@ -111,8 +111,9 @@ export function formatAbilitySpecial(
         final.header = '+'
         final.value = formatValues(attr[key], match[1] ? true : false)
         final.footer = strings[`dota_ability_variable_${header}`]
-        if ('dota_ability_variable_attack_range'.includes(header))
+        if ('dota_ability_variable_attack_range'.includes(header)) {
           final.footer = final.footer.replace(/<[^>]*>/g, '')
+        }
       } else {
         final.header = header.replace(/<[^>]*>/g, '')
         final.value = formatValues(attr[key], match[1] ? true : false)
@@ -174,7 +175,7 @@ export function replaceSpecialAttribs(
   attribs: JsonObject[],
   isItem = false,
   allData: JsonObject = {},
-  key = null // For error tracing
+  key: string | null = null // For error tracing
 ) {
   if (!template) {
     return template
@@ -210,6 +211,8 @@ export function replaceSpecialAttribs(
     if (template.includes('%customval_team_tomes_used%')) {
       //in-game line not required in tooltip
       template = template.replace(/[ a-zA-Z]+: %\w+%/g, '')
+      // 上面的正则不支持中文。直接将知识之书的已使用数量替换为0
+      template = template.replace('%customval_team_tomes_used%', '0')
     }
 
     template = template.replace(/%([^% ]*)%/g, function (_str, name) {
@@ -229,6 +232,9 @@ export function replaceSpecialAttribs(
           return attribs.find((obj) => 'lifesteal_percent' in obj)!.lifesteal_percent
         } else if (name === 'movement_slow') {
           return attribs.find((obj) => 'damage_pct' in obj)!.damage_pct
+        } else if (name === 'movemont_speed_min') {
+          // 低级的拼写错误？
+          return attribs.find((obj) => 'movement_speed_min' in obj)!.movement_speed_min
         }
 
         console.log(`cant find attribute %${name}% in %${key}%`)
@@ -344,6 +350,70 @@ export const getNeutralItemNameTierMap = (neutrals: ResponseNeutral) => {
     })
   })
   return ret
+}
+
+export function replaceSpecialAbilityValues(template: string, ability: JsonObject) {
+  if (!template || !ability) {
+    return template
+  }
+
+  const abilityValues = ability.AbilityValues
+
+  template = template.replace(/%([^% ]*)%/g, function (_str, name: string) {
+    if (name == '') {
+      return '%'
+    }
+
+    // 剑圣的治疗守卫（juggernaut_healing_ward）的持续时间是在外层的，即ability里面，但key是纯小写。。。
+    // 而其他的一般都在内层，即ability.AbilityValues里面
+
+    const exist = checkKeyExisted(name, ability)
+    if (exist) {
+      return getValueFrom(exist, ability)
+    } else if (abilityValues) {
+      const e = checkKeyExisted(name, abilityValues)
+      if (e) {
+        return getValueFrom(e, abilityValues)
+      } else {
+        return name
+      }
+    } else {
+      return name
+    }
+  })
+
+  template = template.replace(/\\n/g, '\n').replace(/<[^>]*>/g, '')
+
+  return template
+}
+
+//
+/**
+ * V社好像不注重大小写。。。
+ * 查找一个给定的key是否存在于object中，忽略大小写
+ * @param key key
+ * @param obj object
+ * @returns 如果存在，返回在object中的实际key；如果不存在，返回null
+ */
+function checkKeyExisted(key: string, obj: JsonObject) {
+  for (const k of Object.keys(obj)) {
+    if (k.toLowerCase() === key.toLowerCase()) {
+      return k
+    }
+  }
+
+  return null
+}
+
+function getValueFrom(key: string, obj: JsonObject) {
+  const v = obj[key]
+  if (typeof v === 'string' || typeof v === 'number') {
+    return v
+  } else if (v && v.value) {
+    return v.value
+  }
+
+  return key
 }
 
 function catogerizeItemAbilities(abilities: string[], allData: JsonObject) {
