@@ -32,7 +32,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "敌法",
+    "cn_localized_name": "敌法师",
+    "hero_link_name": "anti-mage"
   },
   "npc_dota_hero_axe": {
     "id": 2,
@@ -69,7 +72,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "斧王",
+    "cn_localized_name": "斧王",
+    "hero_link_name": "axe"
   },
   "npc_dota_hero_bane": {
     "id": 3,
@@ -105,7 +111,10 @@
     "move_speed": 305,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "祸乱之源",
+    "cn_localized_name": "祸乱之源",
+    "hero_link_name": "bane"
   },
   "npc_dota_hero_bloodseeker": {
     "id": 4,
@@ -142,7 +151,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "血魔",
+    "cn_localized_name": "血魔",
+    "hero_link_name": "bloodseeker"
   },
   "npc_dota_hero_crystal_maiden": {
     "id": 5,
@@ -178,7 +190,10 @@
     "move_speed": 280,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "冰女",
+    "cn_localized_name": "水晶室女",
+    "hero_link_name": "crystalmaiden"
   },
   "npc_dota_hero_drow_ranger": {
     "id": 6,
@@ -213,7 +228,10 @@
     "move_speed": 295,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小黑",
+    "cn_localized_name": "卓尔游侠",
+    "hero_link_name": "drowranger"
   },
   "npc_dota_hero_earthshaker": {
     "id": 7,
@@ -249,7 +267,10 @@
     "move_speed": 315,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小牛",
+    "cn_localized_name": "撼地者",
+    "hero_link_name": "earthshaker"
   },
   "npc_dota_hero_juggernaut": {
     "id": 8,
@@ -284,7 +305,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "剑圣",
+    "cn_localized_name": "主宰",
+    "hero_link_name": "juggernaut"
   },
   "npc_dota_hero_mirana": {
     "id": 9,
@@ -321,7 +345,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "POM",
+    "cn_localized_name": "米拉娜",
+    "hero_link_name": "mirana"
   },
   "npc_dota_hero_morphling": {
     "id": 10,
@@ -358,7 +385,10 @@
     "move_speed": 285,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "水人",
+    "cn_localized_name": "变体精灵",
+    "hero_link_name": "morphling"
   },
   "npc_dota_hero_nevermore": {
     "id": 11,
@@ -392,7 +422,10 @@
     "move_speed": 305,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "影魔",
+    "cn_localized_name": "影魔",
+    "hero_link_name": "shadowfiend"
   },
   "npc_dota_hero_phantom_lancer": {
     "id": 12,
@@ -428,7 +461,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "猴子",
+    "cn_localized_name": "幻影长矛手",
+    "hero_link_name": "phantomlancer"
   },
   "npc_dota_hero_puck": {
     "id": 13,
@@ -464,7 +500,10 @@
     "move_speed": 290,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "帕克",
+    "cn_localized_name": "帕克",
+    "hero_link_name": "puck"
   },
   "npc_dota_hero_pudge": {
     "id": 14,
@@ -500,7 +539,10 @@
     "move_speed": 280,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "屠夫",
+    "cn_localized_name": "帕吉",
+    "hero_link_name": "pudge"
   },
   "npc_dota_hero_razor": {
     "id": 15,
@@ -536,7 +578,10 @@
     "move_speed": 280,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "电棍",
+    "cn_localized_name": "剃刀",
+    "hero_link_name": "razor"
   },
   "npc_dota_hero_sand_king": {
     "id": 16,
@@ -574,7 +619,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 6
+    "legs": 6,
+    "nickname": "沙王",
+    "cn_localized_name": "沙王",
+    "hero_link_name": "sandking"
   },
   "npc_dota_hero_storm_spirit": {
     "id": 17,
@@ -611,7 +659,10 @@
     "move_speed": 285,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "蓝猫",
+    "cn_localized_name": "风暴之灵",
+    "hero_link_name": "stormspirit"
   },
   "npc_dota_hero_sven": {
     "id": 18,
@@ -648,7 +699,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "斯温",
+    "cn_localized_name": "斯温",
+    "hero_link_name": "sven"
   },
   "npc_dota_hero_tiny": {
     "id": 19,
@@ -686,7 +740,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小小",
+    "cn_localized_name": "小小",
+    "hero_link_name": "tiny"
   },
   "npc_dota_hero_vengefulspirit": {
     "id": 20,
@@ -723,7 +780,10 @@
     "move_speed": 295,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "VS",
+    "cn_localized_name": "复仇之魂",
+    "hero_link_name": "vengefulspirit"
   },
   "npc_dota_hero_windrunner": {
     "id": 21,
@@ -760,7 +820,10 @@
     "move_speed": 290,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "风行",
+    "cn_localized_name": "风行者",
+    "hero_link_name": "windranger"
   },
   "npc_dota_hero_zuus": {
     "id": 22,
@@ -794,7 +857,10 @@
     "move_speed": 315,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "宙斯",
+    "cn_localized_name": "宙斯",
+    "hero_link_name": "zeus"
   },
   "npc_dota_hero_kunkka": {
     "id": 23,
@@ -832,7 +898,10 @@
     "move_speed": 315,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "船长",
+    "cn_localized_name": "昆卡",
+    "hero_link_name": "kunkka"
   },
   "npc_dota_hero_lina": {
     "id": 25,
@@ -868,7 +937,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "火女",
+    "cn_localized_name": "莉娜",
+    "hero_link_name": "lina"
   },
   "npc_dota_hero_lion": {
     "id": 26,
@@ -904,7 +976,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "莱恩",
+    "cn_localized_name": "莱恩",
+    "hero_link_name": "lion"
   },
   "npc_dota_hero_shadow_shaman": {
     "id": 27,
@@ -941,7 +1016,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小y",
+    "cn_localized_name": "暗影萨满",
+    "hero_link_name": "shadowshaman"
   },
   "npc_dota_hero_slardar": {
     "id": 28,
@@ -978,7 +1056,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "大鱼人",
+    "cn_localized_name": "斯拉达",
+    "hero_link_name": "slardar"
   },
   "npc_dota_hero_tidehunter": {
     "id": 29,
@@ -1015,7 +1096,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "潮汐",
+    "cn_localized_name": "潮汐猎人",
+    "hero_link_name": "tidehunter"
   },
   "npc_dota_hero_witch_doctor": {
     "id": 30,
@@ -1050,7 +1134,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "巫医",
+    "cn_localized_name": "巫医",
+    "hero_link_name": "witchdoctor"
   },
   "npc_dota_hero_lich": {
     "id": 31,
@@ -1084,7 +1171,10 @@
     "move_speed": 295,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "巫妖",
+    "cn_localized_name": "巫妖",
+    "hero_link_name": "lich"
   },
   "npc_dota_hero_riki": {
     "id": 32,
@@ -1119,7 +1209,10 @@
     "move_speed": 315,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "隐刺",
+    "cn_localized_name": "力丸",
+    "hero_link_name": "riki"
   },
   "npc_dota_hero_enigma": {
     "id": 33,
@@ -1155,7 +1248,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "谜团",
+    "cn_localized_name": "谜团",
+    "hero_link_name": "enigma"
   },
   "npc_dota_hero_tinker": {
     "id": 34,
@@ -1190,7 +1286,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "TK",
+    "cn_localized_name": "修补匠",
+    "hero_link_name": "tinker"
   },
   "npc_dota_hero_sniper": {
     "id": 35,
@@ -1224,7 +1323,10 @@
     "move_speed": 285,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "火枪",
+    "cn_localized_name": "狙击手",
+    "hero_link_name": "sniper"
   },
   "npc_dota_hero_necrolyte": {
     "id": 36,
@@ -1260,7 +1362,10 @@
     "move_speed": 280,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "NEC",
+    "cn_localized_name": "瘟疫法师",
+    "hero_link_name": "necrophos"
   },
   "npc_dota_hero_warlock": {
     "id": 37,
@@ -1295,7 +1400,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "术士",
+    "cn_localized_name": "术士",
+    "hero_link_name": "warlock"
   },
   "npc_dota_hero_beastmaster": {
     "id": 38,
@@ -1331,7 +1439,10 @@
     "move_speed": 305,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "兽王",
+    "cn_localized_name": "兽王",
+    "hero_link_name": "beastmaster"
   },
   "npc_dota_hero_queenofpain": {
     "id": 39,
@@ -1366,7 +1477,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "女王",
+    "cn_localized_name": "痛苦女王",
+    "hero_link_name": "queenofpain"
   },
   "npc_dota_hero_venomancer": {
     "id": 40,
@@ -1403,7 +1517,10 @@
     "move_speed": 280,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "剧毒",
+    "cn_localized_name": "剧毒术士",
+    "hero_link_name": "venomancer"
   },
   "npc_dota_hero_faceless_void": {
     "id": 41,
@@ -1440,7 +1557,10 @@
     "move_speed": 300,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "虚空",
+    "cn_localized_name": "虚空假面",
+    "hero_link_name": "facelessvoid"
   },
   "npc_dota_hero_skeleton_king": {
     "id": 42,
@@ -1477,7 +1597,10 @@
     "move_speed": 315,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "骷髅王",
+    "cn_localized_name": "冥魂大帝",
+    "hero_link_name": "wraithking"
   },
   "npc_dota_hero_death_prophet": {
     "id": 43,
@@ -1513,7 +1636,10 @@
     "move_speed": 285,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "DP",
+    "cn_localized_name": "死亡先知",
+    "hero_link_name": "deathprophet"
   },
   "npc_dota_hero_phantom_assassin": {
     "id": 44,
@@ -1547,7 +1673,10 @@
     "move_speed": 305,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "PA",
+    "cn_localized_name": "幻影刺客",
+    "hero_link_name": "phantomassassin"
   },
   "npc_dota_hero_pugna": {
     "id": 45,
@@ -1581,7 +1710,10 @@
     "move_speed": 330,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "骨法",
+    "cn_localized_name": "帕格纳",
+    "hero_link_name": "pugna"
   },
   "npc_dota_hero_templar_assassin": {
     "id": 46,
@@ -1615,7 +1747,10 @@
     "move_speed": 305,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "TA",
+    "cn_localized_name": "圣堂刺客",
+    "hero_link_name": "templarassassin"
   },
   "npc_dota_hero_viper": {
     "id": 47,
@@ -1651,7 +1786,10 @@
     "move_speed": 275,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "毒龙",
+    "cn_localized_name": "冥界亚龙",
+    "hero_link_name": "viper"
   },
   "npc_dota_hero_luna": {
     "id": 48,
@@ -1686,7 +1824,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "露娜",
+    "cn_localized_name": "露娜",
+    "hero_link_name": "luna"
   },
   "npc_dota_hero_dragon_knight": {
     "id": 49,
@@ -1724,7 +1865,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "龙骑",
+    "cn_localized_name": "龙骑士",
+    "hero_link_name": "dragonknight"
   },
   "npc_dota_hero_dazzle": {
     "id": 50,
@@ -1759,7 +1903,10 @@
     "move_speed": 305,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "戴泽",
+    "cn_localized_name": "戴泽",
+    "hero_link_name": "dazzle"
   },
   "npc_dota_hero_rattletrap": {
     "id": 51,
@@ -1795,7 +1942,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "发条",
+    "cn_localized_name": "发条技师",
+    "hero_link_name": "clockwerk"
   },
   "npc_dota_hero_leshrac": {
     "id": 52,
@@ -1832,7 +1982,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "老鹿",
+    "cn_localized_name": "拉席克",
+    "hero_link_name": "leshrac"
   },
   "npc_dota_hero_furion": {
     "id": 53,
@@ -1869,7 +2022,10 @@
     "move_speed": 295,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "先知",
+    "cn_localized_name": "先知",
+    "hero_link_name": "nature'sprophet"
   },
   "npc_dota_hero_life_stealer": {
     "id": 54,
@@ -1906,7 +2062,10 @@
     "move_speed": 320,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小狗",
+    "cn_localized_name": "噬魂鬼",
+    "hero_link_name": "lifestealer"
   },
   "npc_dota_hero_dark_seer": {
     "id": 55,
@@ -1942,7 +2101,10 @@
     "move_speed": 295,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "兔子",
+    "cn_localized_name": "黑暗贤者",
+    "hero_link_name": "darkseer"
   },
   "npc_dota_hero_clinkz": {
     "id": 56,
@@ -1977,7 +2139,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小骷髅",
+    "cn_localized_name": "克林克兹",
+    "hero_link_name": "clinkz"
   },
   "npc_dota_hero_omniknight": {
     "id": 57,
@@ -2012,7 +2177,10 @@
     "move_speed": 315,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "全能",
+    "cn_localized_name": "全能骑士",
+    "hero_link_name": "omniknight"
   },
   "npc_dota_hero_enchantress": {
     "id": 58,
@@ -2049,7 +2217,10 @@
     "move_speed": 320,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "小鹿",
+    "cn_localized_name": "魅惑魔女",
+    "hero_link_name": "enchantress"
   },
   "npc_dota_hero_huskar": {
     "id": 59,
@@ -2084,7 +2255,10 @@
     "move_speed": 295,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "哈斯卡",
+    "cn_localized_name": "哈斯卡",
+    "hero_link_name": "huskar"
   },
   "npc_dota_hero_night_stalker": {
     "id": 60,
@@ -2121,7 +2295,10 @@
     "move_speed": 295,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "夜魔",
+    "cn_localized_name": "暗夜魔王",
+    "hero_link_name": "nightstalker"
   },
   "npc_dota_hero_broodmother": {
     "id": 61,
@@ -2157,7 +2334,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 8
+    "legs": 8,
+    "nickname": "蜘蛛",
+    "cn_localized_name": "育母蜘蛛",
+    "hero_link_name": "broodmother"
   },
   "npc_dota_hero_bounty_hunter": {
     "id": 62,
@@ -2191,7 +2371,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "赏金",
+    "cn_localized_name": "赏金猎人",
+    "hero_link_name": "bountyhunter"
   },
   "npc_dota_hero_weaver": {
     "id": 63,
@@ -2225,7 +2408,10 @@
     "move_speed": 275,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "蚂蚁",
+    "cn_localized_name": "编织者",
+    "hero_link_name": "weaver"
   },
   "npc_dota_hero_jakiro": {
     "id": 64,
@@ -2261,7 +2447,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "双头龙",
+    "cn_localized_name": "杰奇洛",
+    "hero_link_name": "jakiro"
   },
   "npc_dota_hero_batrider": {
     "id": 65,
@@ -2297,7 +2486,10 @@
     "move_speed": 310,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "蝙蝠",
+    "cn_localized_name": "蝙蝠骑士",
+    "hero_link_name": "batrider"
   },
   "npc_dota_hero_chen": {
     "id": 66,
@@ -2332,7 +2524,10 @@
     "move_speed": 305,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "陈",
+    "cn_localized_name": "陈",
+    "hero_link_name": "chen"
   },
   "npc_dota_hero_spectre": {
     "id": 67,
@@ -2367,7 +2562,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "幽鬼",
+    "cn_localized_name": "幽鬼",
+    "hero_link_name": "spectre"
   },
   "npc_dota_hero_ancient_apparition": {
     "id": 68,
@@ -2402,7 +2600,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "冰魂",
+    "cn_localized_name": "远古冰魄",
+    "hero_link_name": "ancientapparition"
   },
   "npc_dota_hero_doom_bringer": {
     "id": 69,
@@ -2439,7 +2640,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "末日",
+    "cn_localized_name": "末日使者",
+    "hero_link_name": "doom"
   },
   "npc_dota_hero_ursa": {
     "id": 70,
@@ -2475,7 +2679,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "拍拍熊",
+    "cn_localized_name": "熊战士",
+    "hero_link_name": "ursa"
   },
   "npc_dota_hero_spirit_breaker": {
     "id": 71,
@@ -2512,7 +2719,10 @@
     "move_speed": 295,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "SB",
+    "cn_localized_name": "裂魂人",
+    "hero_link_name": "spiritbreaker"
   },
   "npc_dota_hero_gyrocopter": {
     "id": 72,
@@ -2547,7 +2757,10 @@
     "move_speed": 315,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "飞机",
+    "cn_localized_name": "矮人直升机",
+    "hero_link_name": "gyrocopter"
   },
   "npc_dota_hero_alchemist": {
     "id": 73,
@@ -2585,7 +2798,10 @@
     "move_speed": 305,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "炼金",
+    "cn_localized_name": "炼金术士",
+    "hero_link_name": "alchemist"
   },
   "npc_dota_hero_invoker": {
     "id": 74,
@@ -2622,7 +2838,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "卡尔",
+    "cn_localized_name": "祈求者",
+    "hero_link_name": "invoker"
   },
   "npc_dota_hero_silencer": {
     "id": 75,
@@ -2659,7 +2878,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "沉默",
+    "cn_localized_name": "沉默术士",
+    "hero_link_name": "silencer"
   },
   "npc_dota_hero_obsidian_destroyer": {
     "id": 76,
@@ -2694,7 +2916,10 @@
     "move_speed": 320,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "黑鸟",
+    "cn_localized_name": "殁境神蚀者",
+    "hero_link_name": "outworlddevourer"
   },
   "npc_dota_hero_lycan": {
     "id": 77,
@@ -2731,7 +2956,10 @@
     "move_speed": 305,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "狼人",
+    "cn_localized_name": "狼人",
+    "hero_link_name": "lycan"
   },
   "npc_dota_hero_brewmaster": {
     "id": 78,
@@ -2768,7 +2996,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "酒仙",
+    "cn_localized_name": "酒仙",
+    "hero_link_name": "brewmaster"
   },
   "npc_dota_hero_shadow_demon": {
     "id": 79,
@@ -2804,7 +3035,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "毒狗",
+    "cn_localized_name": "暗影恶魔",
+    "hero_link_name": "shadowdemon"
   },
   "npc_dota_hero_lone_druid": {
     "id": 80,
@@ -2840,7 +3074,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "熊德",
+    "cn_localized_name": "德鲁伊",
+    "hero_link_name": "lonedruid"
   },
   "npc_dota_hero_chaos_knight": {
     "id": 81,
@@ -2877,7 +3114,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "CK",
+    "cn_localized_name": "混沌骑士",
+    "hero_link_name": "chaosknight"
   },
   "npc_dota_hero_meepo": {
     "id": 82,
@@ -2915,7 +3155,10 @@
     "move_speed": 330,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "米波",
+    "cn_localized_name": "米波",
+    "hero_link_name": "meepo"
   },
   "npc_dota_hero_treant": {
     "id": 83,
@@ -2952,7 +3195,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "大树",
+    "cn_localized_name": "树精卫士",
+    "hero_link_name": "treantprotector"
   },
   "npc_dota_hero_ogre_magi": {
     "id": 84,
@@ -2989,7 +3235,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "蓝胖",
+    "cn_localized_name": "食人魔魔法师",
+    "hero_link_name": "ogremagi"
   },
   "npc_dota_hero_undying": {
     "id": 85,
@@ -3025,7 +3274,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "尸王",
+    "cn_localized_name": "不朽尸王",
+    "hero_link_name": "undying"
   },
   "npc_dota_hero_rubick": {
     "id": 86,
@@ -3060,7 +3312,10 @@
     "move_speed": 290,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "拉比克",
+    "cn_localized_name": "拉比克",
+    "hero_link_name": "rubick"
   },
   "npc_dota_hero_disruptor": {
     "id": 87,
@@ -3096,7 +3351,10 @@
     "move_speed": 295,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "萨尔",
+    "cn_localized_name": "干扰者",
+    "hero_link_name": "disruptor"
   },
   "npc_dota_hero_nyx_assassin": {
     "id": 88,
@@ -3132,7 +3390,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 6
+    "legs": 6,
+    "nickname": "小强",
+    "cn_localized_name": "司夜刺客",
+    "hero_link_name": "nyxassassin"
   },
   "npc_dota_hero_naga_siren": {
     "id": 89,
@@ -3170,7 +3431,10 @@
     "move_speed": 330,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "小娜迦",
+    "cn_localized_name": "娜迦海妖",
+    "hero_link_name": "nagasiren"
   },
   "npc_dota_hero_keeper_of_the_light": {
     "id": 90,
@@ -3206,7 +3470,10 @@
     "move_speed": 320,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "光法",
+    "cn_localized_name": "光之守卫",
+    "hero_link_name": "keeperofthelight"
   },
   "npc_dota_hero_wisp": {
     "id": 91,
@@ -3241,7 +3508,10 @@
     "move_speed": 320,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "小精灵",
+    "cn_localized_name": "艾欧",
+    "hero_link_name": "io"
   },
   "npc_dota_hero_visage": {
     "id": 92,
@@ -3278,7 +3548,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "死灵龙",
+    "cn_localized_name": "维萨吉",
+    "hero_link_name": "visage"
   },
   "npc_dota_hero_slark": {
     "id": 93,
@@ -3314,7 +3587,10 @@
     "move_speed": 300,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "小鱼人",
+    "cn_localized_name": "斯拉克",
+    "hero_link_name": "slark"
   },
   "npc_dota_hero_medusa": {
     "id": 94,
@@ -3349,7 +3625,10 @@
     "move_speed": 275,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "美杜莎",
+    "cn_localized_name": "美杜莎",
+    "hero_link_name": "medusa"
   },
   "npc_dota_hero_troll_warlord": {
     "id": 95,
@@ -3385,7 +3664,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "巨魔",
+    "cn_localized_name": "巨魔战将",
+    "hero_link_name": "trollwarlord"
   },
   "npc_dota_hero_centaur": {
     "id": 96,
@@ -3422,7 +3704,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "人马",
+    "cn_localized_name": "半人马战行者",
+    "hero_link_name": "centaurwarrunner"
   },
   "npc_dota_hero_magnataur": {
     "id": 97,
@@ -3458,7 +3743,10 @@
     "move_speed": 305,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "猛犸",
+    "cn_localized_name": "马格纳斯",
+    "hero_link_name": "magnus"
   },
   "npc_dota_hero_shredder": {
     "id": 98,
@@ -3493,7 +3781,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "伐木机",
+    "cn_localized_name": "伐木机",
+    "hero_link_name": "timbersaw"
   },
   "npc_dota_hero_bristleback": {
     "id": 99,
@@ -3529,7 +3820,10 @@
     "move_speed": 295,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "钢背",
+    "cn_localized_name": "钢背兽",
+    "hero_link_name": "bristleback"
   },
   "npc_dota_hero_tusk": {
     "id": 100,
@@ -3564,7 +3858,10 @@
     "move_speed": 310,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "海民",
+    "cn_localized_name": "巨牙海民",
+    "hero_link_name": "tusk"
   },
   "npc_dota_hero_skywrath_mage": {
     "id": 101,
@@ -3599,7 +3896,10 @@
     "move_speed": 325,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "天怒",
+    "cn_localized_name": "天怒法师",
+    "hero_link_name": "skywrathmage"
   },
   "npc_dota_hero_abaddon": {
     "id": 102,
@@ -3634,7 +3934,10 @@
     "move_speed": 325,
     "turn_rate": 0.6,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "亚巴顿",
+    "cn_localized_name": "亚巴顿",
+    "hero_link_name": "abaddon"
   },
   "npc_dota_hero_elder_titan": {
     "id": 103,
@@ -3670,7 +3973,10 @@
     "move_speed": 310,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "大牛",
+    "cn_localized_name": "上古巨神",
+    "hero_link_name": "eldertitan"
   },
   "npc_dota_hero_legion_commander": {
     "id": 104,
@@ -3707,7 +4013,10 @@
     "move_speed": 330,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "军团",
+    "cn_localized_name": "军团指挥官",
+    "hero_link_name": "legioncommander"
   },
   "npc_dota_hero_techies": {
     "id": 105,
@@ -3741,7 +4050,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 6
+    "legs": 6,
+    "nickname": "炸弹人",
+    "cn_localized_name": "工程师",
+    "hero_link_name": "techies"
   },
   "npc_dota_hero_ember_spirit": {
     "id": 106,
@@ -3778,7 +4090,10 @@
     "move_speed": 300,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "火猫",
+    "cn_localized_name": "灰烬之灵",
+    "hero_link_name": "emberspirit"
   },
   "npc_dota_hero_earth_spirit": {
     "id": 107,
@@ -3815,7 +4130,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "土猫",
+    "cn_localized_name": "大地之灵",
+    "hero_link_name": "earthspirit"
   },
   "npc_dota_hero_abyssal_underlord": {
     "id": 108,
@@ -3852,7 +4170,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "大屁股",
+    "cn_localized_name": "孽主",
+    "hero_link_name": "underlord"
   },
   "npc_dota_hero_terrorblade": {
     "id": 109,
@@ -3887,7 +4208,10 @@
     "move_speed": 315,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "TB",
+    "cn_localized_name": "恐怖利刃",
+    "hero_link_name": "terrorblade"
   },
   "npc_dota_hero_phoenix": {
     "id": 110,
@@ -3924,7 +4248,10 @@
     "move_speed": 280,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "凤凰",
+    "cn_localized_name": "凤凰",
+    "hero_link_name": "phoenix"
   },
   "npc_dota_hero_oracle": {
     "id": 111,
@@ -3960,7 +4287,10 @@
     "move_speed": 295,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "神谕",
+    "cn_localized_name": "神谕者",
+    "hero_link_name": "oracle"
   },
   "npc_dota_hero_winter_wyvern": {
     "id": 112,
@@ -3995,7 +4325,10 @@
     "move_speed": 285,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "冰龙",
+    "cn_localized_name": "寒冬飞龙",
+    "hero_link_name": "winterwyvern"
   },
   "npc_dota_hero_arc_warden": {
     "id": 113,
@@ -4030,7 +4363,10 @@
     "move_speed": 285,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "电狗",
+    "cn_localized_name": "天穹守望者",
+    "hero_link_name": "arcwarden"
   },
   "npc_dota_hero_monkey_king": {
     "id": 114,
@@ -4066,7 +4402,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "大圣",
+    "cn_localized_name": "齐天大圣",
+    "hero_link_name": "monkeyking"
   },
   "npc_dota_hero_dark_willow": {
     "id": 119,
@@ -4102,7 +4441,10 @@
     "move_speed": 290,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "花仙子",
+    "cn_localized_name": "邪影芳灵",
+    "hero_link_name": "darkwillow"
   },
   "npc_dota_hero_pangolier": {
     "id": 120,
@@ -4140,7 +4482,10 @@
     "move_speed": 300,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "滚滚",
+    "cn_localized_name": "石鳞剑士",
+    "hero_link_name": "pangolier"
   },
   "npc_dota_hero_grimstroke": {
     "id": 121,
@@ -4176,7 +4521,10 @@
     "move_speed": 290,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 0
+    "legs": 0,
+    "nickname": "墨客",
+    "cn_localized_name": "天涯墨客",
+    "hero_link_name": "grimstroke"
   },
   "npc_dota_hero_hoodwink": {
     "id": 123,
@@ -4212,7 +4560,10 @@
     "move_speed": 310,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 4
+    "legs": 4,
+    "nickname": "小松鼠",
+    "cn_localized_name": "森海飞霞",
+    "hero_link_name": "hoodwink"
   },
   "npc_dota_hero_void_spirit": {
     "id": 126,
@@ -4248,7 +4599,10 @@
     "move_speed": 295,
     "turn_rate": 0.7,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "紫猫",
+    "cn_localized_name": "虚无之灵",
+    "hero_link_name": "voidspirit"
   },
   "npc_dota_hero_snapfire": {
     "id": 128,
@@ -4284,7 +4638,10 @@
     "move_speed": 300,
     "turn_rate": null,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "老奶奶",
+    "cn_localized_name": "电炎绝手",
+    "hero_link_name": "snapfire"
   },
   "npc_dota_hero_mars": {
     "id": 129,
@@ -4320,7 +4677,10 @@
     "move_speed": 310,
     "turn_rate": 0.8,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "玛尔斯",
+    "cn_localized_name": "玛尔斯",
+    "hero_link_name": "mars"
   },
   "npc_dota_hero_dawnbreaker": {
     "id": 135,
@@ -4354,7 +4714,10 @@
     "move_speed": 310,
     "turn_rate": 0.6,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "锤妹",
+    "cn_localized_name": "破晓辰星",
+    "hero_link_name": "dawnbreaker"
   },
   "npc_dota_hero_marci": {
     "id": 136,
@@ -4391,7 +4754,10 @@
     "move_speed": 315,
     "turn_rate": 0.9,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "玛西",
+    "cn_localized_name": "玛西",
+    "hero_link_name": "marci"
   },
   "npc_dota_hero_primal_beast": {
     "id": 137,
@@ -4426,6 +4792,9 @@
     "move_speed": 310,
     "turn_rate": 0.6,
     "cm_enabled": true,
-    "legs": 2
+    "legs": 2,
+    "nickname": "獸",
+    "cn_localized_name": "獸",
+    "hero_link_name": "primalbeast"
   }
 }

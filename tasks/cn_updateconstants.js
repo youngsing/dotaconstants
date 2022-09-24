@@ -708,6 +708,7 @@ const sources = [
       heroes = heroes.sort((a, b) => a.id - b.id)
       let heroesObj = {}
       for (hero of heroes) {
+        Object.assign(hero, myHeroes[hero.id])
         hero.id = Number(hero.id)
         heroesObj[hero.name] = hero
       }

@@ -22725,12 +22725,6 @@
         "generated": true
       },
       {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "325",
-        "generated": true
-      },
-      {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
         "value": "0.001",
@@ -23682,12 +23676,6 @@
         ]
       },
       {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "300",
-        "generated": true
-      },
-      {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
         "value": "0",
@@ -24259,12 +24247,6 @@
         "generated": true
       },
       {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "650",
-        "generated": true
-      },
-      {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
         "value": "0",
@@ -24601,12 +24583,6 @@
         "key": "radius",
         "header": "RADIUS:",
         "value": "350",
-        "generated": true
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "500",
         "generated": true
       },
       {

@@ -4,6 +4,8 @@ const fs = require('fs')
 const simplevdf = require('simple-vdf')
 const hero_list = require('../build/heroes.json')
 
+console.time('node_run')
+
 String.prototype.red = function () {
   return `\u001b[31;1m${this}\x1b[0m`
 }
@@ -205,6 +207,7 @@ async.eachLimit(
       )
     })
 
+    console.timeEnd('node_run')
     process.exit(0)
   }
 )

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "types": ["./global.d.ts"]
+  },
+  "lint": {
+    "files": {
+      "exclude": ["tasks/", "utils/"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "exclude": ["tasks/", "utils/"]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+export interface Hero {
+  id: number
+  name: string
+  localized_name: string
+  primary_attr: string
+  attack_type: string
+  roles: string[]
+  img: string
+  icon: string
+  base_health: number
+  base_health_regen: number
+  base_mana: number
+  base_mana_regen: number
+  base_armor: number
+  base_mr: number
+  base_attack_min: number
+  base_attack_max: number
+  base_str: number
+  base_agi: number
+  base_int: number
+  str_gain: number
+  agi_gain: number
+  int_gain: number
+  attack_range: number
+  projectile_speed: number
+  attack_rate: number
+  move_speed: number
+  turn_rate: number
+  cm_enabled: boolean
+  legs: number
+  nickname: string
+  cn_localized_name: string
+  hero_link_name: string
+}
+
+export function emptyHero(): Hero {
+  return {
+    id: 0,
+    name: '',
+    localized_name: '',
+    primary_attr: '',
+    attack_type: '',
+    roles: [],
+    img: '',
+    icon: '',
+    base_health: 0,
+    base_health_regen: 0,
+    base_mana: 0,
+    base_mana_regen: 0,
+    base_armor: 0,
+    base_mr: 0,
+    base_attack_min: 0,
+    base_attack_max: 0,
+    base_str: 0,
+    base_agi: 0,
+    base_int: 0,
+    str_gain: 0,
+    agi_gain: 0,
+    int_gain: 0,
+    attack_range: 0,
+    projectile_speed: 0,
+    attack_rate: 0,
+    move_speed: 0,
+    turn_rate: 0,
+    cm_enabled: false,
+    legs: 0,
+    nickname: '',
+    cn_localized_name: '',
+    hero_link_name: '',
+  }
+}
