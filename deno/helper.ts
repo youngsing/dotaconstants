@@ -1,5 +1,5 @@
 import { Hero, emptyHero } from '../interfaces/Hero.ts'
-import { RespNpcHeroes } from '../interfaces/Response.ts'
+import { RespNpcHeroes, ResponseNeutral } from '../interfaces/Response.ts'
 import { cleanupArray } from './utils/utils.ts'
 
 const extraStrings: Record<string, string> = {
@@ -57,11 +57,7 @@ const extraAttribKeys = [
 ]
 
 // Formats something like "20 21 22" or [ 20, 21, 22 ] to be "20 / 21 / 22"
-export function formatValues(
-  value: unknown,
-  percent: boolean | undefined = false,
-  separator = ' / '
-) {
+export function formatValues(value: unknown, percent = false, separator = ' / ') {
   let values = Array.isArray(value) ? value : String(value).split(' ')
   if (values.every((v) => v == values[0])) {
     values = [values[0]]
@@ -89,44 +85,44 @@ export function formatAbilitySpecial(
   strings_prefix: string
 ) {
   if (attributes && !Array.isArray(attributes)) attributes = Object.values(attributes)
-  return (attributes || [])
-    .map((attr) => {
-      let key = Object.keys(attr).find((key) => `${strings_prefix}${key}` in strings)
-      if (!key) {
-        for (const item in attr) {
-          key = item
-          break
-        }
-        return {
-          key: key,
-          header: `${key!.replace(/_/g, ' ').toUpperCase()}:`,
-          value: formatValues(attr[key!]),
-          generated: true,
-        }
+  return (attributes || []).map((attr) => {
+    let key = Object.keys(attr).find((key) => `${strings_prefix}${key}` in strings)
+    if (!key) {
+      for (const item in attr) {
+        key = item
+        break
       }
-
-      const final: JsonObject = { key: key }
-      let header = strings[`${strings_prefix}${key}`]
-      const match = header.match(/(%)?(\+\$)?(.*)/)
-
-      if (match) {
-        header = match[3]
-
-        if (match[2]) {
-          final.header = '+'
-          final.value = formatValues(attr[key], match[1] ? true : false)
-          final.footer = strings[`dota_ability_variable_${header}`]
-          if ('dota_ability_variable_attack_range'.includes(header))
-            final.footer = final.footer.replace(/<[^>]*>/g, '')
-        } else {
-          final.header = header.replace(/<[^>]*>/g, '')
-          final.value = formatValues(attr[key], match[1] ? true : false)
-        }
+      return {
+        key: key,
+        header: `${key!.replace(/_/g, ' ').toUpperCase()}:`,
+        value: formatValues(attr[key!]),
+        generated: true,
       }
+    }
 
-      return final
-    })
-    .filter((a) => a)
+    const final: JsonObject = { key: key }
+    let header = strings[`${strings_prefix}${key}`]
+    const match = header.match(/(%)?(\+\$)?(.*)/)
+
+    if (match) {
+      header = match[3]
+
+      if (match[2]) {
+        final.header = '+'
+        final.value = formatValues(attr[key], match[1] ? true : false)
+        final.footer = strings[`dota_ability_variable_${header}`]
+        if ('dota_ability_variable_attack_range'.includes(header))
+          final.footer = final.footer.replace(/<[^>]*>/g, '')
+      } else {
+        final.header = header.replace(/<[^>]*>/g, '')
+        final.value = formatValues(attr[key], match[1] ? true : false)
+      }
+    }
+
+    return final
+  })
+  ///???: 不知道有什么作用
+  // .filter((a) => a)
 }
 
 export function replaceSValues(template: string, attribs: JsonObject[]) {
@@ -298,7 +294,7 @@ export function formatVpkHero(
     '/apps/dota2/images/dota_react/heroes/icons/' +
     key.replace('npc_dota_hero_', '') +
     '.png?'
-  ///FIXME: 好像没有作用
+  ///???: 好像没有作用
   // h.url = vpkrh.url
 
   h.base_health = Number(vpkrh.StatusHealth || baseHero.StatusHealth)
@@ -333,15 +329,17 @@ export function formatVpkHero(
 }
 
 /**
+ * 中立道具的级别
  * 输入参数格式参看https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt
- * @param neutrals 键值对
- * @returns 键值对
+ * @param neutrals ResponseNeutral
+ * @returns Record<string, number>
  */
-export const getNeutralItemNameTierMap = (neutrals: JsonObject) => {
-  const ret: JsonObject = {}
+export const getNeutralItemNameTierMap = (neutrals: ResponseNeutral) => {
+  const ret: Record<string, number> = {}
   Object.keys(neutrals).forEach((tier) => {
     const items = neutrals[tier].items
     Object.keys(items).forEach((itemName) => {
+      ///???: 没看懂。。。中立道具的图纸？
       ret[itemName] = ret[itemName.replace(/recipe_/gi, '')] = parseInt(tier)
     })
   })
@@ -382,7 +380,7 @@ function catogerizeItemAbilities(abilities: string[], allData: JsonObject) {
           desc: desc,
         })
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     }
   })

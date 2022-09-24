@@ -13,6 +13,8 @@ import {
   RespAbilities,
   RespItemAbilities,
   RespNpcHeroes,
+  ResponseHeroLore,
+  ResponseNeutral,
 } from '../interfaces/Response.ts'
 import { mapAbilities, parseVdf } from './utils/utils.ts'
 import myHeroes from './customize_heroes.json' assert { type: 'json' }
@@ -33,7 +35,7 @@ const sources: {
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt',
     ],
-    transform: (respObj: [RespAbilities, RespItemAbilities, JsonObject]) => {
+    transform: (respObj: [RespAbilities, RespItemAbilities, ResponseNeutral]) => {
       const strings = mapAbilities(respObj[0].lang.Tokens)
       const scripts = respObj[1].DOTAAbilities
       const neutrals = respObj[2]
@@ -314,6 +316,7 @@ const sources: {
           }
           abilities[key] = ability
         })
+
       return abilities
     },
   },
@@ -342,7 +345,7 @@ const sources: {
       })
       heroes = heroes.sort((a, b) => a.id - b.id)
 
-      const heroesObj: { [key: string]: Hero } = {}
+      const heroesObj: Record<string, Hero> = {}
       for (const hero of heroes) {
         Object.assign(hero, myHeroes[hero.id.toString() as keyof typeof myHeroes])
         hero.id = Number(hero.id)
@@ -376,7 +379,7 @@ const sources: {
       })
       heroes = heroes.sort((a, b) => a.id - b.id)
 
-      const heroesObj: { [key: string]: Hero } = {}
+      const heroesObj: Record<string, Hero> = {}
       for (const hero of heroes) {
         Object.assign(hero, myHeroes[hero.id.toString() as keyof typeof myHeroes])
         hero.id = Number(hero.id)
@@ -391,9 +394,9 @@ const sources: {
     urls: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_schinese.txt',
     ],
-    transform: (respObj: [{ language: string; tokens: { [key: string]: string } }]) => {
+    transform: (respObj: [ResponseHeroLore]) => {
       const obj = Object.entries(respObj[0].tokens)
-      const lores: JsonObject = {}
+      const lores: Record<string, string> = {}
 
       for (const [key, value] of obj) {
         // npc_dota_hero_marci_bio

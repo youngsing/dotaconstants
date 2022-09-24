@@ -20,3 +20,15 @@ export interface CommonDotaResponse {
   // deno-lint-ignore no-explicit-any
   [key: string]: any
 }
+
+export interface ResponseNeutral {
+  [key: string]: {
+    drop_rates: { [key: string]: { [key: string]: string } }
+    items: { [key: string]: string }
+  }
+}
+
+export interface ResponseHeroLore {
+  language: string
+  tokens: { [key: string]: string }
+}
