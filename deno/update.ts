@@ -10,14 +10,14 @@ import {
   formatVpkHero,
 } from './helper.ts'
 import {
-  RespAbilities,
-  RespItemAbilities,
-  RespNpcHeroes,
+  ResponseAbilities,
+  ResponseItemAbilities,
+  ResponseNpcHeroes,
   ResponseHeroLore,
   ResponseNeutral,
 } from '../interfaces/Response.ts'
 import { mapAbilities, parseVdf } from './utils/utils.ts'
-import myHeroes from './customize_heroes.json' assert { type: 'json' }
+import myHeroes from '../tasks/customize_heroes.json' assert { type: 'json' }
 import { Hero } from '../interfaces/Hero.ts'
 
 const sources: {
@@ -35,7 +35,7 @@ const sources: {
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt',
     ],
-    transform: (respObj: [RespAbilities, RespItemAbilities, ResponseNeutral]) => {
+    transform: (respObj: [ResponseAbilities, ResponseItemAbilities, ResponseNeutral]) => {
       const strings = mapAbilities(respObj[0].lang.Tokens)
       const scripts = respObj[1].DOTAAbilities
       const neutrals = respObj[2]
@@ -240,7 +240,7 @@ const sources: {
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_schinese.json',
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json',
     ],
-    transform: (respObj: [RespAbilities, RespItemAbilities]) => {
+    transform: (respObj: [ResponseAbilities, ResponseItemAbilities]) => {
       const strings = respObj[0].lang.Tokens
       const scripts = respObj[1].DOTAAbilities
 
@@ -328,7 +328,7 @@ const sources: {
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json',
       // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
-    transform: (respObj: [RespAbilities, RespNpcHeroes]) => {
+    transform: (respObj: [ResponseAbilities, ResponseNpcHeroes]) => {
       const dotaResp = respObj[0]
       const npcHeroesResp = respObj[1]
 
@@ -362,7 +362,7 @@ const sources: {
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json',
       // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
-    transform: (respObj: [RespAbilities, RespNpcHeroes]) => {
+    transform: (respObj: [ResponseAbilities, ResponseNpcHeroes]) => {
       const dotaResp = respObj[0]
       const npcHeroesResp = respObj[1]
 

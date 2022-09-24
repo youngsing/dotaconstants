@@ -154,7 +154,7 @@ function handleAghsResponse(respObj: ResponseAghs): [string, Aghs] | null {
 }
 
 const ret: Record<string, Aghs> = {}
-const pool = pooledMap<string, ResponseAghs>(5, aghs_desc_urls, (url) =>
+const pool = pooledMap<string, ResponseAghs>(10, aghs_desc_urls, (url) =>
   fetch(url)
     .then((resp) => resp.json())
     .catch((e) => {

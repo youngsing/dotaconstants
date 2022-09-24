@@ -1,21 +1,21 @@
-export interface RespAbilities {
-  lang: RLang
+export interface ResponseAbilities {
+  lang: ResponseLang
 }
 
-export interface RLang {
+export interface ResponseLang {
   Language: string
   Tokens: { [key: string]: string }
 }
 
-export interface RespItemAbilities {
-  DOTAAbilities: CommonDotaResponse
+export interface ResponseItemAbilities {
+  DOTAAbilities: ResponseCommonDota
 }
 
-export interface RespNpcHeroes {
-  DOTAHeroes: CommonDotaResponse
+export interface ResponseNpcHeroes {
+  DOTAHeroes: ResponseCommonDota
 }
 
-export interface CommonDotaResponse {
+export interface ResponseCommonDota {
   Version: string
   // deno-lint-ignore no-explicit-any
   [key: string]: any

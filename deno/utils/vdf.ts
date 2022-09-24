@@ -5,14 +5,15 @@
 // author: Rossen Popov, 2014
 
 export const VDF = {
-  parse: function (text) {
+  parse: function (text: string) {
     if (typeof text != 'string') {
       throw new TypeError('VDF.parse: Expecting parameter to be a string')
     }
 
     const lines = text.split('\n')
 
-    const obj = {}
+    // deno-lint-ignore no-explicit-any
+    const obj: Record<string, any> = {}
     const stack = [obj]
     let expect_bracket = false
     // let name = ''
@@ -92,7 +93,7 @@ export const VDF = {
     return obj
   },
 
-  stringify: function (obj, pretty) {
+  stringify: function (obj: unknown, pretty: boolean) {
     if (typeof obj != 'object') {
       throw new TypeError('VDF.stringify: First input parameter is not an object')
     }
@@ -102,7 +103,8 @@ export const VDF = {
     return this._dump(obj, pretty, 0)
   },
 
-  _dump: function (obj, pretty, level) {
+  // deno-lint-ignore no-explicit-any
+  _dump: function (obj: any, pretty: boolean, level: number) {
     if (typeof obj != 'object') {
       throw new TypeError(
         'VDF.stringify: a key has value of type other than string or object'
@@ -119,7 +121,7 @@ export const VDF = {
       }
     }
 
-    for (key in obj) {
+    for (const key in obj) {
       if (typeof obj[key] == 'object') {
         buf += [
           line_indent,

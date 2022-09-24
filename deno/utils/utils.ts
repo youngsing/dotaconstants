@@ -1,4 +1,4 @@
-import { VDF } from '../vdf.js'
+import { VDF } from './vdf.ts'
 
 export function safelyJSONParse<T>(text: string | null | undefined) {
   if (!text) {

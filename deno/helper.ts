@@ -1,5 +1,5 @@
 import { Hero, emptyHero } from '../interfaces/Hero.ts'
-import { RespNpcHeroes, ResponseNeutral } from '../interfaces/Response.ts'
+import { ResponseNeutral, ResponseNpcHeroes } from '../interfaces/Response.ts'
 import { cleanupArray } from './utils/utils.ts'
 
 const extraStrings: Record<string, string> = {
@@ -269,7 +269,7 @@ export function formatBehavior(text: string) {
 
 export function formatVpkHero(
   key: string,
-  vpkr: RespNpcHeroes,
+  vpkr: ResponseNpcHeroes,
   localized_name: string
 ): Hero {
   const h = emptyHero()
