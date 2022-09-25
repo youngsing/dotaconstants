@@ -247,7 +247,7 @@ const sources: {
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json',
     ],
     transform: (respObj: [ResponseAbilities, ResponseItemAbilities]) => {
-      const strings = respObj[0].lang.Tokens
+      const tokens = respObj[0].lang.Tokens
       const scripts = respObj[1].DOTAAbilities
 
       const not_abilities = [
@@ -263,64 +263,60 @@ const sources: {
       Object.keys(scripts)
         .filter((key) => !not_abilities.includes(key))
         .forEach((key) => {
+          const script = scripts[key]
+
           let ability: JsonObject = {}
 
           ability.dname = replaceSValues(
-            strings[`DOTA_Tooltip_ability_${key}`] ??
-              strings[`DOTA_Tooltip_Ability_${key}`],
-            scripts[key].AbilitySpecial ??
-              (scripts[key].AbilityValues ? [scripts[key].AbilityValues] : undefined)
+            tokens[`DOTA_Tooltip_ability_${key}`] ??
+              tokens[`DOTA_Tooltip_Ability_${key}`],
+            script.AbilitySpecial ??
+              (script.AbilityValues ? [script.AbilityValues] : undefined)
           )
 
           // Check for unreplaced `s:bonus_<talent>`
           // TODO: Create a replace function for the remaining `s:bonus_<talent>` templates whose values are placed in one of the hero's base abilities.
-          if (
-            scripts[key].ad_linked_abilities &&
-            scripts[scripts[key].ad_linked_abilities]
-          ) {
+          if (script.ad_linked_abilities && scripts[script.ad_linked_abilities]) {
             ability.dname = replaceBonusSValues(
               key,
               ability.dname,
-              scripts[scripts[key].ad_linked_abilities].AbilityValues
+              scripts[script.ad_linked_abilities].AbilityValues
             )
           }
 
-          ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined
-          ability.dmg_type =
-            formatBehavior(scripts[key].AbilityUnitDamageType) || undefined
-          ability.bkbpierce = formatBehavior(scripts[key].SpellImmunityType) || undefined
-          ability.target_type =
-            formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined
+          ability.behavior = formatBehavior(script.AbilityBehavior) || undefined
+          ability.dmg_type = formatBehavior(script.AbilityUnitDamageType) || undefined
+          ability.bkbpierce = formatBehavior(script.SpellImmunityType) || undefined
+          ability.target_type = formatBehavior(script.AbilityUnitTargetTeam) || undefined
 
           ability.desc = replaceSpecialAttribs(
-            strings[`DOTA_Tooltip_ability_${key}_Description`],
-            scripts[key].AbilitySpecial,
+            tokens[`DOTA_Tooltip_ability_${key}_Description`],
+            script.AbilitySpecial ??
+              (script.AbilityValues ? [script.AbilityValues] : undefined),
             false,
-            scripts[key],
+            script,
             key
           )
           if (/%\w+%/g.test(ability.desc)) {
             ability.desc = replaceSpecialAbilityValues(
-              strings[`DOTA_Tooltip_ability_${key}_Description`],
-              scripts[key]
+              tokens[`DOTA_Tooltip_ability_${key}_Description`],
+              script
             )
           }
-          ability.dmg =
-            scripts[key].AbilityDamage && formatValues(scripts[key].AbilityDamage)
+
+          ability.dmg = script.AbilityDamage && formatValues(script.AbilityDamage)
 
           ability.attrib = formatAbilitySpecial(
-            scripts[key].AbilitySpecial,
-            strings,
+            script.AbilitySpecial,
+            tokens,
             `DOTA_Tooltip_ability_${key}_`
           )
 
-          if (scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
-            if (scripts[key].AbilityManaCost) {
-              ability.mc = formatValues(scripts[key].AbilityManaCost, false, '/')
-            }
-            if (scripts[key].AbilityCooldown) {
-              ability.cd = formatValues(scripts[key].AbilityCooldown, false, '/')
-            }
+          if (script.AbilityManaCost) {
+            ability.mc = formatValues(script.AbilityManaCost, false, '/')
+          }
+          if (script.AbilityCooldown) {
+            ability.cd = formatValues(script.AbilityCooldown, false, '/')
           }
 
           ability.img = `/apps/dota2/images/abilities/${key}_md.png`
@@ -436,21 +432,14 @@ for (const source of sources) {
 
   for (const url of source.urls) {
     promises.push(
-      fetch(url)
-        .then((resp) => {
-          if (url.endsWith('.json')) {
-            return resp.json()
-          } else {
-            return resp.text()
-          }
-        })
-        .then((value) => {
-          if (typeof value === 'string') {
-            return parseVdf(value)
-          } else {
-            return value
-          }
-        })
+      fetch(url).then(async (resp) => {
+        if (url.endsWith('.json')) {
+          return resp.json()
+        } else {
+          const text = await resp.text()
+          return parseVdf(text)
+        }
+      })
     )
   }
 
@@ -458,6 +447,7 @@ for (const source of sources) {
     console.error('fetch error: ', e)
     return null
   })
+
   if (ret) {
     const obj = source.transform(ret)
     console.log('completed: ', source.key)

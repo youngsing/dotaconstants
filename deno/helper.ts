@@ -1,5 +1,9 @@
 import { Hero, emptyHero } from '../interfaces/Hero.ts'
 import { ResponseNeutral, ResponseNpcHeroes } from '../interfaces/Response.ts'
+import {
+  catogerizeItemAbilities,
+  getValueFromDota2Attributes,
+} from './utils/utils.dota2.ts'
 import { cleanupArray } from './utils/utils.ts'
 
 const extraStrings: Record<string, string> = {
@@ -357,103 +361,15 @@ export function replaceSpecialAbilityValues(template: string, ability: JsonObjec
     return template
   }
 
-  const abilityValues = ability.AbilityValues
-
   template = template.replace(/%([^% ]*)%/g, function (_str, name: string) {
     if (name == '') {
       return '%'
     }
 
-    // 剑圣的治疗守卫（juggernaut_healing_ward）的持续时间是在外层的，即ability里面，但key是纯小写。。。
-    // 而其他的一般都在内层，即ability.AbilityValues里面
-
-    const exist = checkKeyExisted(name, ability)
-    if (exist) {
-      return getValueFrom(exist, ability)
-    } else if (abilityValues) {
-      const e = checkKeyExisted(name, abilityValues)
-      if (e) {
-        return getValueFrom(e, abilityValues)
-      } else {
-        return name
-      }
-    } else {
-      return name
-    }
+    return getValueFromDota2Attributes(name, ability)
   })
 
   template = template.replace(/\\n/g, '\n').replace(/<[^>]*>/g, '')
 
   return template
-}
-
-//
-/**
- * V社好像不注重大小写。。。
- * 查找一个给定的key是否存在于object中，忽略大小写
- * @param key key
- * @param obj object
- * @returns 如果存在，返回在object中的实际key；如果不存在，返回null
- */
-function checkKeyExisted(key: string, obj: JsonObject) {
-  for (const k of Object.keys(obj)) {
-    if (k.toLowerCase() === key.toLowerCase()) {
-      return k
-    }
-  }
-
-  return null
-}
-
-function getValueFrom(key: string, obj: JsonObject) {
-  const v = obj[key]
-  if (typeof v === 'string' || typeof v === 'number') {
-    return v
-  } else if (v && v.value) {
-    return v.value
-  }
-
-  return key
-}
-
-function catogerizeItemAbilities(abilities: string[], allData: JsonObject) {
-  const itemAbilities: JsonObject = {}
-
-  abilities.forEach((ability) => {
-    if (!ability.includes('<h1>')) {
-      // console.log('allData: '.red(), allData)
-      ability = ability.replaceAll('%%', '%')
-      ability = ability.replace(/%([a-z_]+)%/g, function (_str, name) {
-        // console.log('name: '.red(), name)
-        if (allData) {
-          if (name === 'abilitycastrange' && allData.AbilityCastRange) {
-            return allData.AbilityCastRange
-          }
-          if (name === 'abilityduration' && allData.AbilityDuration) {
-            return allData.AbilityDuration
-          }
-          if (allData.AbilityValues) {
-            return allData.AbilityValues[name] || name
-          }
-        }
-        return name
-      })
-      ;(itemAbilities.hint = itemAbilities.hint || []).push(ability)
-    } else {
-      ability = ability.replace(/<[^h1>]*>/gi, '')
-      const regExp = /<h1>\s*(.*)\s*:\s*(.*)\s*<\/h1>\s*([\s\S]*)/gi
-      try {
-        const [_, type, name, desc] = regExp.exec(ability)!
-        ;(itemAbilities[type.toLowerCase()] =
-          itemAbilities[type.toLowerCase()] || []).push({
-          name: name,
-          desc: desc,
-        })
-      } catch (e) {
-        console.error(e)
-      }
-    }
-  })
-
-  return itemAbilities
 }

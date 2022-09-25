@@ -7595,7 +7595,7 @@
   },
   "trusty_shovel": {
     "hint": [
-      "主动：挖掘持续施法abilitychanneltime秒。可以找到一个赏金神符，一瓶治疗药膏，一颗魔法芒果，或一个敌方狗头人。"
+      "主动：挖掘持续施法1秒。可以找到一个赏金神符，一瓶治疗药膏，一颗魔法芒果，或一个敌方狗头人。"
     ],
     "id": 356,
     "img": "/apps/dota2/images/items/trusty_shovel_lg.png?t=1593393829403",
@@ -8013,7 +8013,7 @@
   },
   "pirate_hat": {
     "hint": [
-      "主动：发掘持续施法abilitychanneltime秒。一直都会找到赏金神符！"
+      "主动：发掘持续施法1秒。一直都会找到赏金神符！"
     ],
     "id": 372,
     "img": "/apps/dota2/images/items/pirate_hat_lg.png?t=1593393829403",
