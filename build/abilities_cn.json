@@ -3233,9 +3233,9 @@
     "target_type": "Enemy",
     "desc": "冥魂大帝向一个敌方单位发射冥魂火球，造成即时伤害和眩晕，并持续对目标造成伤害和减速。",
     "dmg": [
-      "60",
-      "80",
-      "100",
+      "75",
+      "90",
+      "105",
       "120"
     ],
     "attrib": [
@@ -3525,10 +3525,10 @@
         "key": "abilitycooldown",
         "header": "ABILITYCOOLDOWN:",
         "value": [
+          "9",
           "8",
           "7",
-          "6",
-          "5"
+          "6"
         ],
         "generated": true
       }
@@ -3540,10 +3540,10 @@
       "110"
     ],
     "cd": [
+      "9",
       "8",
       "7",
-      "6",
-      "5"
+      "6"
     ],
     "img": "/apps/dota2/images/abilities/death_prophet_carrion_swarm_md.png"
   },
@@ -4505,10 +4505,10 @@
         "key": "caustic_finale_slow",
         "header": "移动速度减缓：",
         "value": [
-          "-10%",
-          "-15%",
-          "-20%",
-          "-25%"
+          "-14%",
+          "-18%",
+          "-22%",
+          "-26%"
         ]
       }
     ],
@@ -5215,12 +5215,7 @@
       {
         "key": "duration",
         "header": "眩晕时间：",
-        "value": [
-          "1",
-          "1.1",
-          "1.2",
-          "1.3"
-        ]
+        "value": "1.3"
       },
       {
         "key": "attack_count",
@@ -5311,7 +5306,7 @@
       {
         "key": "abilityduration",
         "header": "负面状态持续时间：",
-        "value": "4"
+        "value": "4.5"
       },
       {
         "key": "abilitycastpoint",
@@ -5407,9 +5402,9 @@
     "bkbpierce": "No",
     "desc": "猛击地面，触手向各个方向穿出，伤害并眩晕附近所有敌方单位。",
     "dmg": [
-      "200",
-      "300",
-      "400"
+      "250",
+      "350",
+      "450"
     ],
     "attrib": [],
     "mc": [
@@ -5854,7 +5849,7 @@
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
     "target_type": "Enemy",
-    "desc": "风行者受风的引领，攻击敌方单位或建筑的攻击速度增加300 400 500，但是攻击力降低。不过次级物品效果的额外伤害不会降低。",
+    "desc": "风行者受风的引领，攻击敌方单位或建筑的攻击速度增加350 425 500，但是攻击力降低。不过次级物品效果的额外伤害不会降低。",
     "attrib": [],
     "mc": [
       "75",
@@ -6516,6 +6511,17 @@
         "generated": true
       },
       {
+        "key": "eidolon_magic_resist_tooltip",
+        "header": "EIDOLON MAGIC RESIST TOOLTIP:",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "generated": true
+      },
+      {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
         "value": "700",
@@ -6588,10 +6594,10 @@
         "key": "damage_percent",
         "header": "每秒伤害：",
         "value": [
-          "6%",
-          "8%",
-          "10%",
-          "12%"
+          "5%",
+          "7%",
+          "9%",
+          "11%"
         ]
       },
       {
@@ -7757,7 +7763,7 @@
       "375",
       "500"
     ],
-    "cd": "170",
+    "cd": "160",
     "img": "/apps/dota2/images/abilities/warlock_rain_of_chaos_md.png"
   },
   "warlock_golem_flaming_fists": {
@@ -8077,7 +8083,12 @@
     "bkbpierce": "No",
     "desc": "沿直线射出一个毒液球，碰到的敌人受到初始伤害和持续伤害，并受到减速效果影响。瘴气在持续时间内每3秒造成一次持续伤害。",
     "attrib": [],
-    "mc": "125",
+    "mc": [
+      "95",
+      "105",
+      "115",
+      "125"
+    ],
     "img": "/apps/dota2/images/abilities/venomancer_venomous_gale_md.png"
   },
   "venomancer_poison_sting": {
@@ -8248,7 +8259,7 @@
       {
         "key": "shard_bonus_range",
         "header": "SHARD BONUS RANGE:",
-        "value": "300",
+        "value": "150",
         "generated": true
       },
       {
@@ -8585,10 +8596,10 @@
         "key": "mana_multiplier",
         "header": "每点魔法造成伤害：",
         "value": [
-          "0.75",
           "1",
-          "1.25",
-          "1.5"
+          "1.2",
+          "1.4",
+          "1.6"
         ]
       },
       {
@@ -11142,9 +11153,9 @@
         "key": "abilitymanacost",
         "header": "ABILITYMANACOST:",
         "value": [
-          "150",
-          "175",
-          "200"
+          "130",
+          "160",
+          "190"
         ],
         "generated": true
       },
@@ -11156,9 +11167,9 @@
       }
     ],
     "mc": [
-      "150",
-      "175",
-      "200"
+      "130",
+      "160",
+      "190"
     ],
     "cd": "85",
     "img": "/apps/dota2/images/abilities/furion_wrath_of_nature_md.png"
@@ -11172,7 +11183,7 @@
     "desc": "对1200范围内所有敌方英雄施加一个诅咒，使他们在迷雾中显形，根据250范围内树木的数量对他们造成减速和持续伤害。在此情况下树人也被视为树木。",
     "attrib": [],
     "mc": "80",
-    "cd": "20",
+    "cd": "18",
     "img": "/apps/dota2/images/abilities/furion_curse_of_the_forest_md.png"
   },
   "life_stealer_rage": {
@@ -11547,10 +11558,10 @@
       "50"
     ],
     "cd": [
-      "19",
-      "16",
-      "13",
-      "10"
+      "18",
+      "15",
+      "12",
+      "9"
     ],
     "img": "/apps/dota2/images/abilities/dark_seer_surge_md.png"
   },
@@ -12875,8 +12886,8 @@
       "225"
     ],
     "cd": [
-      "150",
       "140",
+      "135",
       "130"
     ],
     "img": "/apps/dota2/images/abilities/night_stalker_darkness_md.png"
@@ -14118,10 +14129,10 @@
         "key": "heal_rate",
         "header": "每秒恢复：",
         "value": [
-          "1.5",
+          "1",
+          "2",
           "3",
-          "4.5",
-          "6"
+          "4"
         ]
       },
       {
@@ -14134,6 +14145,12 @@
         "key": "teleport_delay",
         "header": "TELEPORT DELAY:",
         "value": "6",
+        "generated": true
+      },
+      {
+        "key": "creep_bonus",
+        "header": "CREEP BONUS:",
+        "value": "1",
         "generated": true
       },
       {
@@ -14998,7 +15015,7 @@
       {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
-        "value": "0.3",
+        "value": "0.1",
         "generated": true
       },
       {
@@ -15512,12 +15529,12 @@
     "desc": "矮人直升机的攻击会击中目标周围一定范围内的所有敌人，持续一定次数的攻击。只有主要目标会受到致命一击等攻击特效。持续10秒或攻击次数用完。",
     "attrib": [],
     "mc": [
+      "40",
       "50",
       "60",
-      "70",
-      "80"
+      "70"
     ],
-    "cd": "20",
+    "cd": "18",
     "img": "/apps/dota2/images/abilities/gyrocopter_flak_cannon_md.png"
   },
   "gyrocopter_call_down": {
@@ -16278,9 +16295,9 @@
     "attrib": [],
     "mc": "150",
     "cd": [
-      "24",
-      "20",
+      "18",
       "16",
+      "14",
       "12"
     ],
     "img": "/apps/dota2/images/abilities/obsidian_destroyer_astral_imprisonment_md.png"
@@ -17383,10 +17400,10 @@
         "key": "total_damage",
         "header": "总燃烧伤害：",
         "value": [
-          "75",
-          "150",
-          "225",
-          "300"
+          "80",
+          "160",
+          "240",
+          "320"
         ]
       },
       {
@@ -17993,9 +18010,9 @@
         "key": "abilitycooldown",
         "header": "ABILITYCOOLDOWN:",
         "value": [
-          "29",
           "26",
-          "23",
+          "24",
+          "22",
           "20"
         ],
         "generated": true
@@ -18003,9 +18020,9 @@
     ],
     "mc": "120",
     "cd": [
-      "29",
       "26",
-      "23",
+      "24",
+      "22",
       "20"
     ],
     "img": "/apps/dota2/images/abilities/shadow_demon_disruption_md.png"
@@ -18661,7 +18678,7 @@
       "No Target",
       "Hidden"
     ],
-    "desc": "挖掘进入地下，对自身施加驱散效果，无敌且不能作为目标，持续4秒。持续时间内回复最大生命值的40%。被缠绕时无法施放。",
+    "desc": "挖掘进入地下，对自身施加驱散效果，无敌且不能作为目标，持续4秒。持续时间内回复最大生命值的50%。被缠绕时无法施放。",
     "attrib": [
       {
         "key": "duration",
@@ -18671,7 +18688,7 @@
       {
         "key": "hp_restore",
         "header": "最大生命值恢复：",
-        "value": "40%"
+        "value": "50%"
       },
       {
         "key": "abilitycastpoint",
@@ -19704,12 +19721,7 @@
       {
         "key": "abilitymanacost",
         "header": "ABILITYMANACOST:",
-        "value": [
-          "85",
-          "90",
-          "95",
-          "100"
-        ],
+        "value": "100",
         "generated": true
       },
       {
@@ -19724,12 +19736,7 @@
         "generated": true
       }
     ],
-    "mc": [
-      "85",
-      "90",
-      "95",
-      "100"
-    ],
+    "mc": "100",
     "cd": [
       "10",
       "8",
@@ -19974,7 +19981,7 @@
       {
         "key": "slow",
         "header": "移动速度减缓：",
-        "value": "-7%"
+        "value": "-5%"
       },
       {
         "key": "health_threshold_pct",
@@ -21721,7 +21728,11 @@
       {
         "key": "damage",
         "header": "伤害：",
-        "value": "100"
+        "value": [
+          "100",
+          "140",
+          "180"
+        ]
       },
       {
         "key": "AbilityCharges",
@@ -21855,20 +21866,20 @@
         "key": "abilitycooldown",
         "header": "ABILITYCOOLDOWN:",
         "value": [
-          "16",
-          "14",
-          "12",
-          "10"
+          "17",
+          "15",
+          "13",
+          "11"
         ],
         "generated": true
       }
     ],
     "mc": "100",
     "cd": [
-      "16",
-      "14",
-      "12",
-      "10"
+      "17",
+      "15",
+      "13",
+      "11"
     ],
     "img": "/apps/dota2/images/abilities/visage_grave_chill_md.png"
   },
@@ -22000,7 +22011,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "1200",
+        "value": "900",
         "generated": true
       },
       {
@@ -22011,7 +22022,7 @@
       {
         "key": "shard_hp_restoration_pct",
         "header": "SHARD HP RESTORATION PCT:",
-        "value": "35",
+        "value": "25",
         "generated": true
       },
       {
@@ -22639,7 +22650,7 @@
       {
         "key": "radius",
         "header": "作用范围：",
-        "value": "300"
+        "value": "250"
       },
       {
         "key": "abilitycastrange",
@@ -25151,102 +25162,8 @@
     "dmg_type": "Physical",
     "bkbpierce": "No",
     "desc": "上古巨神与他的灵体游魂一起践踏地面，对敌方单位造成伤害并使他们在原地昏迷。上古巨神造成物理伤害，灵体游魂造成魔法伤害。",
-    "attrib": [
-      {
-        "key": "cast_time",
-        "header": "吟唱时间：",
-        "value": "1.7"
-      },
-      {
-        "key": "radius",
-        "header": "作用范围：",
-        "value": "500"
-      },
-      {
-        "key": "sleep_duration",
-        "header": "昏迷时间：",
-        "value": [
-          "2",
-          "3",
-          "4",
-          "5"
-        ]
-      },
-      {
-        "key": "stomp_damage",
-        "header": "践踏伤害：",
-        "value": [
-          "75",
-          "100",
-          "125",
-          "150"
-        ]
-      },
-      {
-        "key": "initial_stun_duration",
-        "header": "INITIAL STUN DURATION:",
-        "value": "0.2",
-        "generated": true
-      },
-      {
-        "key": "animation_rate",
-        "header": "ANIMATION RATE:",
-        "value": "0",
-        "generated": true
-      },
-      {
-        "key": "wake_damage_limit",
-        "header": "唤醒伤害临界值：",
-        "value": [
-          "50",
-          "100",
-          "150",
-          "200"
-        ]
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "500",
-        "generated": true
-      },
-      {
-        "key": "abilitychanneltime",
-        "header": "ABILITYCHANNELTIME:",
-        "value": "1.3",
-        "generated": true
-      },
-      {
-        "key": "abilitycastpoint",
-        "header": "ABILITYCASTPOINT:",
-        "value": "0.4",
-        "generated": true
-      },
-      {
-        "key": "abilitymanacost",
-        "header": "ABILITYMANACOST:",
-        "value": "100",
-        "generated": true
-      },
-      {
-        "key": "abilitycooldown",
-        "header": "ABILITYCOOLDOWN:",
-        "value": [
-          "14",
-          "13",
-          "12",
-          "11"
-        ],
-        "generated": true
-      }
-    ],
+    "attrib": [],
     "mc": "100",
-    "cd": [
-      "14",
-      "13",
-      "12",
-      "11"
-    ],
     "img": "/apps/dota2/images/abilities/elder_titan_echo_stomp_md.png"
   },
   "elder_titan_echo_stomp_spirit": {
@@ -25258,86 +25175,8 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "上古巨神与他的灵体游魂一起践踏地面，对敌方单位造成伤害并使他们在原地昏迷。上古巨神造成物理伤害，灵体游魂造成魔法伤害。昏迷的敌人受到伤害会被惊醒。",
-    "attrib": [
-      {
-        "key": "cast_time",
-        "header": "吟唱时间：",
-        "value": "1.7"
-      },
-      {
-        "key": "radius",
-        "header": "作用范围：",
-        "value": "500"
-      },
-      {
-        "key": "sleep_duration",
-        "header": "昏迷时间：",
-        "value": [
-          "2",
-          "3",
-          "4",
-          "5"
-        ]
-      },
-      {
-        "key": "stomp_damage",
-        "header": "践踏伤害：",
-        "value": [
-          "70",
-          "90",
-          "110",
-          "130"
-        ]
-      },
-      {
-        "key": "animation_rate",
-        "header": "ANIMATION RATE:",
-        "value": "0",
-        "generated": true
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "500",
-        "generated": true
-      },
-      {
-        "key": "abilitychanneltime",
-        "header": "ABILITYCHANNELTIME:",
-        "value": "1.3",
-        "generated": true
-      },
-      {
-        "key": "abilitycastpoint",
-        "header": "ABILITYCASTPOINT:",
-        "value": "0",
-        "generated": true
-      },
-      {
-        "key": "abilitymanacost",
-        "header": "ABILITYMANACOST:",
-        "value": "0",
-        "generated": true
-      },
-      {
-        "key": "abilitycooldown",
-        "header": "ABILITYCOOLDOWN:",
-        "value": [
-          "14",
-          "13",
-          "12",
-          "11"
-        ],
-        "generated": true
-      }
-    ],
+    "attrib": [],
     "mc": "0",
-    "cd": [
-      "14",
-      "13",
-      "12",
-      "11"
-    ],
     "img": "/apps/dota2/images/abilities/elder_titan_echo_stomp_spirit_md.png"
   },
   "elder_titan_ancestral_spirit": {
@@ -27379,73 +27218,11 @@
     "bkbpierce": "Yes",
     "target_type": "Friendly",
     "desc": "暂时篡改队友的命运，技能期间受到的任何治疗和伤害效果将在虚妄之诺结束后结算，其中治疗效果加倍结算。施放时将移除目标身上大部分的负面状态效果。\n\n驱散类型：强驱散",
-    "attrib": [
-      {
-        "key": "duration",
-        "header": "持续时间：",
-        "value": [
-          "7",
-          "8.5",
-          "10"
-        ]
-      },
-      {
-        "key": "radius",
-        "header": "RADIUS:",
-        "value": "400",
-        "generated": true
-      },
-      {
-        "key": "shard_fade_time",
-        "header": "SHARD FADE TIME:",
-        "value": "0.15",
-        "generated": true
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "施法距离：",
-        "value": [
-          "700",
-          "850",
-          "1000"
-        ]
-      },
-      {
-        "key": "abilitycastpoint",
-        "header": "ABILITYCASTPOINT:",
-        "value": "0.3",
-        "generated": true
-      },
-      {
-        "key": "abilitymanacost",
-        "header": "ABILITYMANACOST:",
-        "value": [
-          "100",
-          "150",
-          "200"
-        ],
-        "generated": true
-      },
-      {
-        "key": "abilitycooldown",
-        "header": "ABILITYCOOLDOWN:",
-        "value": [
-          "110",
-          "85",
-          "60"
-        ],
-        "generated": true
-      }
-    ],
+    "attrib": [],
     "mc": [
       "100",
       "150",
       "200"
-    ],
-    "cd": [
-      "110",
-      "85",
-      "60"
     ],
     "img": "/apps/dota2/images/abilities/oracle_false_promise_md.png"
   },
@@ -28925,7 +28702,7 @@
       {
         "key": "speed",
         "header": "SPEED:",
-        "value": "750",
+        "value": "850",
         "generated": true
       },
       {
@@ -28990,7 +28767,7 @@
       {
         "key": "return_projectile_speed",
         "header": "RETURN PROJECTILE SPEED:",
-        "value": "750",
+        "value": "1150",
         "generated": true
       },
       {
@@ -30661,6 +30438,12 @@
         "generated": true
       },
       {
+        "key": "shard_movement_penalty",
+        "header": "SHARD MOVEMENT PENALTY:",
+        "value": "25",
+        "generated": true
+      },
+      {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
         "value": "0.2",
@@ -30890,10 +30673,10 @@
         "key": "heal_pct",
         "header": "HEAL PCT:",
         "value": [
-          "30",
+          "35",
           "40",
-          "50",
-          "60"
+          "45",
+          "50"
         ],
         "generated": true
       },
@@ -32782,37 +32565,7 @@
     "dmg_type": "Magical",
     "target_type": "Enemy",
     "desc": "萨特窃神者偷走敌人灵魂的一块碎片，燃烧掉目标的一些魔法值并造成等量伤害。",
-    "attrib": [
-      {
-        "key": "burn_amount",
-        "header": "燃烧魔法值：",
-        "value": "100"
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "600",
-        "generated": true
-      },
-      {
-        "key": "abilitycastpoint",
-        "header": "ABILITYCASTPOINT:",
-        "value": "0.3",
-        "generated": true
-      },
-      {
-        "key": "abilitymanacost",
-        "header": "ABILITYMANACOST:",
-        "value": "50",
-        "generated": true
-      },
-      {
-        "key": "abilitycooldown",
-        "header": "ABILITYCOOLDOWN:",
-        "value": "18",
-        "generated": true
-      }
-    ],
+    "attrib": [],
     "mc": "50",
     "cd": "18",
     "img": "/apps/dota2/images/abilities/satyr_soulstealer_mana_burn_md.png"
@@ -33496,7 +33249,7 @@
       {
         "key": "mana_regen",
         "header": "魔法恢复：",
-        "value": "2"
+        "value": "1.75"
       },
       {
         "key": "radius",
@@ -38638,7 +38391,7 @@
     "dname": "+1 维萨吉和佣兽削弱护甲"
   },
   "special_bonus_unique_visage_2": {
-    "dname": "+25 维萨吉和佣兽移动速度"
+    "dname": "+20 维萨吉和佣兽移动速度"
   },
   "special_bonus_unique_visage_3": {
     "dname": "灵魂超度攻击2个目标"
@@ -38695,7 +38448,7 @@
     "dname": "连环霜冻无限弹跳"
   },
   "special_bonus_unique_lich_6": {
-    "dname": "+125 寒霜爆发范围和伤害"
+    "dname": "+150 寒霜爆发范围和伤害"
   },
   "special_bonus_unique_lich_7": {
     "dname": "+100 连环霜冻伤害"
@@ -38866,7 +38619,7 @@
     "dname": "+2 致命连接目标"
   },
   "special_bonus_unique_warlock_10": {
-    "dname": "+10 剧变每秒向友军提供攻击速度"
+    "dname": "+12 剧变每秒向友军提供攻击速度"
   },
   "special_bonus_unique_warlock_upheaval_aoe": {
     "dname": "+{s:bonus_aoe} 剧变作用范围"
@@ -39322,7 +39075,7 @@
     "dname": "+{s:bonus_min_skeleton_spawn} 最低骷髅兵产生数量"
   },
   "special_bonus_unique_wraith_king_6": {
-    "dname": "+24 骷髅兵攻击力"
+    "dname": "+26 骷髅兵攻击力"
   },
   "special_bonus_unique_wraith_king_7": {
     "dname": "+1.2秒 冥火爆击减速"
@@ -39655,7 +39408,7 @@
     "dname": "施放月光时发射{s:bonus_glaives_fired}个月刃"
   },
   "special_bonus_unique_faceless_void": {
-    "dname": "+120 时间结界内攻击速度"
+    "dname": "+95 时间结界内攻击速度"
   },
   "special_bonus_unique_faceless_void_2": {
     "dname": "+140 时间结界范围"
@@ -39667,7 +39420,7 @@
     "dname": "+20% 回到过去"
   },
   "special_bonus_unique_faceless_void_5": {
-    "dname": "-1.5秒 时间漫游冷却"
+    "dname": "-1秒 时间漫游冷却"
   },
   "special_bonus_unique_faceless_void_6": {
     "dname": "+{s:bonus_damage_per_stack} 时间膨胀冷却技能每秒伤害"
@@ -39826,7 +39579,7 @@
     "dname": "集中火力击杀后减少20秒冷却"
   },
   "special_bonus_unique_windranger_3": {
-    "dname": "-10% 强力击伤害降低"
+    "dname": "-15% 强力击伤害降低"
   },
   "special_bonus_unique_windranger_4": {
     "dname": "-3秒 风行冷却"
@@ -39895,7 +39648,7 @@
     "dname": "+1 能量转移敏捷获取/窃取"
   },
   "special_bonus_unique_slark_6": {
-    "dname": "-1秒 黑暗契约冷却"
+    "dname": "-0秒 黑暗契约冷却"
   },
   "special_bonus_unique_slark_7": {
     "dname": "+75 暗影之舞攻击速度"
@@ -40135,13 +39888,13 @@
     "dname": "+2% 灵体游魂触碰英雄移速"
   },
   "special_bonus_unique_elder_titan_2": {
-    "dname": "+75 回音重踏伤害"
+    "dname": "+{s:value} 回音重踏伤害"
   },
   "special_bonus_unique_elder_titan_3": {
     "dname": "-60秒 裂地沟壑冷却"
   },
   "special_bonus_unique_elder_titan_4": {
-    "dname": "+450 回音重踏唤醒伤害"
+    "dname": "+{s:value} 回音重踏唤醒伤害"
   },
   "special_bonus_unique_elder_titan_5": {
     "dname": "+{s:bonus_radius} 自然秩序范围"
@@ -40465,7 +40218,7 @@
     "dname": "+{s:bonus_hero_stun_duration}秒 两极反转眩晕"
   },
   "special_bonus_unique_magnus_6": {
-    "dname": "+0.5秒 震荡波减速"
+    "dname": "+{s:value}秒 震荡波减速"
   },
   "special_bonus_unique_magnus_7": {
     "dname": "-7秒 巨角冲撞冷却"
@@ -40574,7 +40327,7 @@
     "dname": "-{s:bonus_AbilityCooldown}秒 诱捕冷却"
   },
   "special_bonus_unique_oracle": {
-    "dname": "+1.5秒 虚妄之诺持续时间"
+    "dname": "+{s:value}秒 虚妄之诺持续时间"
   },
   "special_bonus_unique_oracle_2": {
     "dname": "+{s:bonus_maximum_purge_duration}秒 气运之末持续时间"
@@ -40589,7 +40342,7 @@
     "dname": "-1.25秒 涤罪之焰冷却"
   },
   "special_bonus_unique_oracle_6": {
-    "dname": "-20秒 虚妄之诺冷却"
+    "dname": "-{s:value}秒 虚妄之诺冷却"
   },
   "special_bonus_unique_oracle_7": {
     "dname": "气运之末即时生效"
@@ -40598,7 +40351,7 @@
     "dname": "+30% 涤罪之焰对敌人伤害"
   },
   "special_bonus_unique_oracle_9": {
-    "dname": "+10 虚妄之诺护甲"
+    "dname": "+{s:value} 虚妄之诺护甲"
   },
   "special_bonus_unique_oracle_fortunes_end_damage": {
     "dname": "+{s:bonus_damage} 气运之末伤害"
@@ -41006,7 +40759,7 @@
     "dname": "全屏神力恩泽光环"
   },
   "special_bonus_unique_chen_11": {
-    "dname": "250 赎罪造成伤害"
+    "dname": "225 赎罪造成伤害"
   },
   "special_bonus_unique_chen_12": {
     "dname": "上帝之手施加强驱散"

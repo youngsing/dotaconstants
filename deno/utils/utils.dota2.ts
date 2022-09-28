@@ -35,10 +35,11 @@ export function getValueFromDota2Attributes(key: string, attributes: JsonObject)
 
   if (attributes) {
     for (const lookup of lookupKeys) {
-      if (attributes[lookup]) {
-        const actualKey = checkKeyExisted(key, attributes[lookup])
+      const attri = attributes[lookup]
+      if (attri) {
+        const actualKey = checkKeyExisted(key, attri)
         if (actualKey) {
-          return getValueFrom(actualKey, attributes[lookup])
+          return getValueFrom(actualKey, attri)
         }
       }
     }

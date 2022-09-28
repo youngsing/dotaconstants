@@ -21,10 +21,13 @@ for (const hero_id in hero_list) {
   )
 }
 
-function parseAghanimDesc(desc: string, specialValues: ResponseAghsSpecialValue[]) {
+function parseAghanimDesc(
+  desc: string,
+  specialValues: ResponseAghsSpecialValue[] | null | undefined
+) {
   let ret = desc.replaceAll('%%', '%')
 
-  if (specialValues && specialValues.length) {
+  if (specialValues?.length) {
     const matched = ret.match(/\%([a-z_]+?)\%/gi)
     if (matched) {
       for (const m of matched) {
@@ -51,10 +54,10 @@ function parseAghanimDesc(desc: string, specialValues: ResponseAghsSpecialValue[
 
 function parseHeroSpecialValues(obj: ResponseAghsSpecialValue) {
   let ret = ''
-  if (obj.values_float && obj.values_float.length) {
+  if (obj.values_float?.length) {
     ret += obj.values_float.join(',')
   }
-  if (obj.values_int && obj.values_int.length) {
+  if (obj.values_int?.length) {
     ret += obj.values_int.join(',')
   }
   return ret
